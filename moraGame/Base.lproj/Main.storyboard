@@ -97,12 +97,18 @@
                                     <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0LQ-Hq-9yJ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGE-6s-Yuz">
+                                <rect key="frame" x="36" y="694" width="302" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.51372549019607838" green="0.50980392156862742" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.52165710034013602" green="0.50959289965986398" blue="0.30947066326530615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.51372551919999998" green="0.50980395079999996" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <outlet property="gameOverImageView" destination="czH-Rd-97d" id="aJ4-b4-UuE"/>
+                        <outlet property="isHiddenView" destination="QGE-6s-Yuz" id="e2l-zo-Iy7"/>
                         <outlet property="oppositeImageView" destination="Xbc-Kq-4DA" id="mre-0I-eCq"/>
                         <outlet property="oppositeScoreLabel" destination="8ni-6U-y2w" id="h15-EO-84y"/>
                         <outlet property="paperButton" destination="GFu-0A-4nQ" id="HwN-Pw-Qm3"/>

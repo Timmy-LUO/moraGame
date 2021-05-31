@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var gameOverImageView: UIImageView!
+    @IBOutlet weak var isHiddenView: UIView!
     
     //user方顯示之圖片
     let paperImage = UIImage(named: "03")
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gameOverImageView.isHidden = true
+        isHiddenView.isHidden = true
     }
     //computer方的隨機圖片
     func oppositeRandom() {
@@ -49,16 +51,18 @@ class ViewController: UIViewController {
             winLoseLabel.textColor = UIColor.green
             winLoseLabel.text = "YOU WIN"
             gameOverImageView.isHidden = false
-            paperButton.isHidden = true
-            scissorButton.isHidden = true
-            stoneButton.isHidden = true
+            isHiddenView.isHidden = false
+//            paperButton.isHidden = true
+//            scissorButton.isHidden = true
+//            stoneButton.isHidden = true
         } else if oppositeScoreNumber == 5 {
             winLoseLabel.textColor = UIColor.red
             winLoseLabel.text = "YOU LOSE"
             gameOverImageView.isHidden = false
-            paperButton.isHidden = true
-            scissorButton.isHidden = true
-            stoneButton.isHidden = true
+            isHiddenView.isHidden = false
+//            paperButton.isHidden = true
+//            scissorButton.isHidden = true
+//            stoneButton.isHidden = true
         }
     }
     
@@ -115,6 +119,7 @@ class ViewController: UIViewController {
     
     @IBAction func restart(_ sender: UIButton) {
         gameOverImageView.isHidden = true
+        isHiddenView.isHidden = true
         userScoreNumber = 0
         userScoreLabel.text = "\(userScoreNumber)"
         oppositeScoreNumber = 0
